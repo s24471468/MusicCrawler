@@ -37,7 +37,18 @@ public class Main {
             System.out.println();
 
             count = 1;
-            for (Element e: allStudents) {
+            Elements specStudents;
+            for (int i = 0;i<allStudents.size();i++) {
+                if (i == 58) {
+                    i += 3;
+                } else {
+                    specStudents = allStudents.get(i).select("li > a");
+                }
+                System.out.println();
+                count++;
+            }
+
+            /*for (Element e: allStudents) {
                 Elements specStudents = e.select("li > a");
                 listOfSpecStudents = new ArrayList<>(specStudents.eachText());
                 for (String student: listOfSpecStudents) {
@@ -45,7 +56,7 @@ public class Main {
                 }
                 System.out.println();
                 count++;
-            }
+            }*/
 
 
             /*List<String> listOfStudents;
